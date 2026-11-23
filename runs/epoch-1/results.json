@@ -1,0 +1,27 @@
+{
+  "project_id": "cv_cifar100_cnn",
+  "task": "image classification",
+  "dataset": "CIFAR-100 (official 50k/10k fine labels; torchvision or HF uoft-cs/cifar100)",
+  "model": "SmallCNN",
+  "metrics": {
+    "top1_accuracy": 0.1509,
+    "best_top1_accuracy": 0.1509
+  },
+  "split": "official test (10,000 images, 100 fine classes)",
+  "epochs": 1,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 89.75,
+  "timestamp": "2026-11-20T15:29:45.832342+08:00",
+  "command": "python scripts/train.py --epochs 1 --batch-size 128 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 3.8204483574676513,
+      "train_acc": 0.10242,
+      "test_loss": 3.533456525039673,
+      "test_acc": 0.1509
+    }
+  ],
+  "notes": "Official complete CIFAR-100 train/test, 100 fine-grained classes. SmallCNN from scratch; a few epochs, not SOTA."
+}
