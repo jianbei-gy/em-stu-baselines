@@ -1,0 +1,2 @@
+CIFAR-10 (official 50k/10k; torchvision or HF uoft-cs/cifar10 mirror)
+Official complete CIFAR-10 train/test. ResNet-18 uses 3x3 stride-1 conv1 and no first max-pool. A few epochs on GPU; not a SOTA run.

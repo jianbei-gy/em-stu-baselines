@@ -1,0 +1,41 @@
+{
+  "project_id": "cv_cifar10_resnet",
+  "task": "image classification",
+  "dataset": "CIFAR-10 (official 50k/10k; torchvision or HF uoft-cs/cifar10 mirror)",
+  "model": "ResNet-18 (CIFAR stem)",
+  "metrics": {
+    "top1_accuracy": 0.7451,
+    "best_top1_accuracy": 0.7451
+  },
+  "split": "official test (10,000 images)",
+  "epochs": 3,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 1106.25,
+  "timestamp": "2026-11-18T02:10:39.716821+08:00",
+  "command": "python scripts/train.py --epochs 3 --batch-size 128 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3381616293334961,
+      "train_acc": 0.51316,
+      "test_loss": 1.2567099752426147,
+      "test_acc": 0.5737
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.8761880692100525,
+      "train_acc": 0.6901,
+      "test_loss": 0.976123035621643,
+      "test_acc": 0.6761
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6832081429672241,
+      "train_acc": 0.76228,
+      "test_loss": 0.7871228866577148,
+      "test_acc": 0.7451
+    }
+  ],
+  "notes": "Official complete CIFAR-10 train/test. ResNet-18 uses 3x3 stride-1 conv1 and no first max-pool. A few epochs on GPU; not a SOTA run."
+}
