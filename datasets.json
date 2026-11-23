@@ -1,0 +1,9 @@
+{
+  "MNIST": "cv_mnist_cnn",
+  "Fashion-MNIST": "cv_fashion_mnist_cnn",
+  "CIFAR-10": "cv_cifar10_resnet",
+  "CIFAR-100": "cv_cifar100_cnn",
+  "Frappe_x1": "ctr_frappe_fm",
+  "MovielensLatest_x1": "ctr_ml_latest_deepfm",
+  "MovieLens 100K": "gr_ml100k_sasrec"
+}

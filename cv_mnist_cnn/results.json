@@ -1,0 +1,40 @@
+{
+  "project_id": "cv_mnist_cnn",
+  "task": "image classification",
+  "dataset": "MNIST (torchvision official)",
+  "model": "SmallCNN",
+  "metrics": {
+    "top1_accuracy": 0.9911
+  },
+  "split": "official test (10,000 images)",
+  "epochs": 3,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 71.59,
+  "timestamp": "2026-11-18T01:33:49.833883+08:00",
+  "command": "python train.py --epochs 3 --batch-size 128 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.18947361505627633,
+      "train_acc": 0.9488,
+      "test_loss": 0.06545607202351093,
+      "test_acc": 0.9792
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.04119077993532022,
+      "train_acc": 0.9875833333333334,
+      "test_loss": 0.03719842997286469,
+      "test_acc": 0.9866
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.03031348291710019,
+      "train_acc": 0.9905333333333334,
+      "test_loss": 0.025975087045226247,
+      "test_acc": 0.9911
+    }
+  ],
+  "notes": "Trained on official 60,000 training images; reported metric is official test top-1 accuracy."
+}

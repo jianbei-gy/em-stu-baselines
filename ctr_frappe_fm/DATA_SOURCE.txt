@@ -1,0 +1,2 @@
+Frappe_x1 (reczoo/BARS official 7:2:1 split of the Frappe app-usage CTR set; 202,027 / 57,722 / 28,860). Source: https://huggingface.co/datasets/reczoo/Frappe_x1 ; original: Baltrunas et al., arXiv:1505.03014, https://www.baltrunas.info/context-aware
+Complete published Frappe_x1 split (md5 verified). Not a hand-cut Criteo/Avazu dump. Features hashed per field to a fixed bin size for a compact embedding table. Metrics: AUC and LogLoss on the official test split.

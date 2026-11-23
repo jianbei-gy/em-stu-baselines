@@ -1,0 +1,33 @@
+{
+  "project_id": "ctr_ml_latest_deepfm",
+  "task": "CTR prediction",
+  "dataset": "MovielensLatest_x1 (reczoo/BARS official 7:2:1 split of MovieLens Latest tagging records formulated as CTR; 1,404,801 / 401,372 / 200,686). Source: https://huggingface.co/datasets/reczoo/MovielensLatest_x1 ; original MovieLens Latest from GroupLens. Features: user_id, item_id, tag_id; label whether the user assigned that tag.",
+  "model": "DeepFM",
+  "metrics": {
+    "auc": 0.9187590278665885,
+    "logloss": 0.33002224564552307,
+    "best_auc": 0.9187590278665885
+  },
+  "split": "official test split of the published dataset",
+  "epochs": 1,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 13.51,
+  "timestamp": "2026-11-20T15:14:44.202588+08:00",
+  "command": "python scripts/train.py --epochs 1 --batch-size 2048 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.37862050792528873,
+      "test_auc": 0.9187590278665885,
+      "test_logloss": 0.33002224564552307,
+      "valid_auc": 0.9186941449679866,
+      "valid_logloss": 0.33049994707107544
+    }
+  ],
+  "n_train": 1404801,
+  "n_test": 200686,
+  "n_features": 3,
+  "hash_bins_per_field": 40000,
+  "notes": "Complete published MovielensLatest_x1 split (md5 verified). Distinct from Frappe and from iPinYou, and also distinct from the MovieLens 100K sequential-rec project (different official GroupLens release and a tag-CTR formulation). Metrics: AUC and LogLoss on the official test split."
+}

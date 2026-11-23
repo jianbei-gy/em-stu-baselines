@@ -1,0 +1,41 @@
+{
+  "project_id": "cv_fashion_mnist_cnn",
+  "task": "image classification",
+  "dataset": "Fashion-MNIST (official, torchvision)",
+  "model": "SmallCNN",
+  "metrics": {
+    "top1_accuracy": 0.9053,
+    "best_top1_accuracy": 0.9053
+  },
+  "split": "official test (10,000 images)",
+  "epochs": 3,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 127.43,
+  "timestamp": "2026-11-18T01:43:34.476643+08:00",
+  "command": "python scripts/train.py --epochs 3 --batch-size 128 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.47427335521380104,
+      "train_acc": 0.8290833333333333,
+      "test_loss": 0.42247357697486876,
+      "test_acc": 0.8534
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2783409873167674,
+      "train_acc": 0.8988333333333334,
+      "test_loss": 0.31414122090339663,
+      "test_acc": 0.8822
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.23684752277533214,
+      "train_acc": 0.9148166666666666,
+      "test_loss": 0.26147880420684816,
+      "test_acc": 0.9053
+    }
+  ],
+  "notes": "Trained on official 60,000 training images; reported metric is official test top-1 accuracy."
+}

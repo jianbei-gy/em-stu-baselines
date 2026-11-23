@@ -1,0 +1,4 @@
+MovieLens 100K (GroupLens official u.data).
+Source: https://files.grouplens.org/datasets/movielens/ml-100k.zip
+Protocol: all ratings as implicit feedback; time-sorted leave-one-out (last item test, second-last validation); drop users with fewer than 3 interactions.
+This project does not use Amazon Beauty.

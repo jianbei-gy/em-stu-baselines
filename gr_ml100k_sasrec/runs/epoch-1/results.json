@@ -1,0 +1,42 @@
+{
+  "project_id": "gr_ml100k_sasrec",
+  "task": "sequential recommendation",
+  "dataset": "MovieLens 100K (GroupLens official u.data, time-sorted leave-one-out implicit)",
+  "model": "SASRec",
+  "metrics": {
+    "hr@10": 0.01378578991132412,
+    "ndcg@10": 0.006974108637659193
+  },
+  "split": "leave-one-out last item (full ranking, excluding train+val items)",
+  "n_users": 943,
+  "n_items": 1682,
+  "epochs": 1,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 1.23,
+  "timestamp": "2026-11-20T15:18:08.447116+08:00",
+  "command": "python scripts/train.py --epochs 1 --batch-size 128 --lr 0.001 --hidden 64 --max-len 50 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 7.431216209568689,
+      "val_hr@10": 0.012725344633393204,
+      "val_ndcg@10": 0.004814388844493702
+    }
+  ],
+  "stop_reason": "completed",
+  "notes": "Causal SASRec (hidden 64, max len 50, 2 layers). Metrics are full-rank HR@10 and NDCG@10 on the official GroupLens MovieLens 100K interactions after time-sorted leave-one-out. Numbers come from this run only.",
+  "stats": {
+    "n_users": 943,
+    "n_items": 1682,
+    "n_train_interactions": 98114,
+    "n_val": 943,
+    "n_test": 943,
+    "min_train_len": 18,
+    "max_train_len": 735,
+    "median_train_len": 63.0,
+    "dataset": "MovieLens 100K (GroupLens official u.data)",
+    "source": "https://files.grouplens.org/datasets/movielens/ml-100k.zip",
+    "protocol": "time-sorted leave-one-out; implicit (all ratings); users with <3 interactions dropped"
+  }
+}

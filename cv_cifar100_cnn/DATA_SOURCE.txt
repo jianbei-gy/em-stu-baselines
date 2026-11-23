@@ -1,0 +1,2 @@
+CIFAR-100 (official 50k/10k fine labels; torchvision or HF uoft-cs/cifar100)
+Official complete CIFAR-100 train/test, 100 fine-grained classes. SmallCNN from scratch; a few epochs, not SOTA.

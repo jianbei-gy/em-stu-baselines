@@ -1,0 +1,216 @@
+{
+  "project_id": "gr_ml100k_sasrec",
+  "task": "sequential recommendation",
+  "dataset": "MovieLens 100K (GroupLens official u.data, time-sorted leave-one-out implicit)",
+  "model": "SASRec",
+  "metrics": {
+    "hr@10": 0.47401908909149415,
+    "ndcg@10": 0.44096842986528595
+  },
+  "split": "leave-one-out last item (full ranking, excluding train+val items)",
+  "n_users": 943,
+  "n_items": 1682,
+  "epochs": 30,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 45.97,
+  "timestamp": "2026-11-18T02:03:46.022145+08:00",
+  "command": "python scripts/train.py --epochs 30 --batch-size 128 --lr 0.001 --hidden 64 --max-len 50 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 7.431216209568689,
+      "val_hr@10": 0.41993637191781563,
+      "val_ndcg@10": 0.41724812279703255
+    },
+    {
+      "epoch": 2,
+      "train_loss": 7.2109087462715795,
+      "val_hr@10": 0.436903496878271,
+      "val_ndcg@10": 0.4235504499991145
+    },
+    {
+      "epoch": 3,
+      "train_loss": 6.945731088181569,
+      "val_hr@10": 0.44220572811169184,
+      "val_ndcg@10": 0.42625746111981055
+    },
+    {
+      "epoch": 4,
+      "train_loss": 6.799777796908026,
+      "val_hr@10": 0.4443266155042173,
+      "val_ndcg@10": 0.42822352857630175
+    },
+    {
+      "epoch": 5,
+      "train_loss": 6.742782435718074,
+      "val_hr@10": 0.44644750627834245,
+      "val_ndcg@10": 0.4314458782953523
+    },
+    {
+      "epoch": 6,
+      "train_loss": 6.726230064908957,
+      "val_hr@10": 0.4485683961359592,
+      "val_ndcg@10": 0.43236156365777884
+    },
+    {
+      "epoch": 7,
+      "train_loss": 6.71922909959441,
+      "val_hr@10": 0.4464475053618341,
+      "val_ndcg@10": 0.4322661356101739
+    },
+    {
+      "epoch": 8,
+      "train_loss": 6.708446617398578,
+      "val_hr@10": 0.4464475053618341,
+      "val_ndcg@10": 0.4324438608590265
+    },
+    {
+      "epoch": 9,
+      "train_loss": 6.6913996118490715,
+      "val_hr@10": 0.4485683982850132,
+      "val_ndcg@10": 0.4321959708616817
+    },
+    {
+      "epoch": 10,
+      "train_loss": 6.653583200567986,
+      "val_hr@10": 0.4496288415230218,
+      "val_ndcg@10": 0.4309144382259373
+    },
+    {
+      "epoch": 11,
+      "train_loss": 6.597481731216788,
+      "val_hr@10": 0.4506892899756467,
+      "val_ndcg@10": 0.43148192061725626
+    },
+    {
+      "epoch": 12,
+      "train_loss": 6.52376600769822,
+      "val_hr@10": 0.4687168621561813,
+      "val_ndcg@10": 0.4378169140090113
+    },
+    {
+      "epoch": 13,
+      "train_loss": 6.443895812669619,
+      "val_hr@10": 0.4581124052199933,
+      "val_ndcg@10": 0.4376188582036553
+    },
+    {
+      "epoch": 14,
+      "train_loss": 6.3581839203188695,
+      "val_hr@10": 0.4718981995499147,
+      "val_ndcg@10": 0.44276204771606187
+    },
+    {
+      "epoch": 15,
+      "train_loss": 6.281185521755196,
+      "val_hr@10": 0.4708377520137981,
+      "val_ndcg@10": 0.44284262554769427
+    },
+    {
+      "epoch": 16,
+      "train_loss": 6.208713119437553,
+      "val_hr@10": 0.47613997986561923,
+      "val_ndcg@10": 0.4447122376139571
+    },
+    {
+      "epoch": 17,
+      "train_loss": 6.142456985493021,
+      "val_hr@10": 0.48250265648610263,
+      "val_ndcg@10": 0.44859622951403405
+    },
+    {
+      "epoch": 18,
+      "train_loss": 6.079767358468527,
+      "val_hr@10": 0.4846235451111738,
+      "val_ndcg@10": 0.4498337517993195
+    },
+    {
+      "epoch": 19,
+      "train_loss": 6.018038375022998,
+      "val_hr@10": 0.48356309542600323,
+      "val_ndcg@10": 0.4506572290607121
+    },
+    {
+      "epoch": 20,
+      "train_loss": 5.965575078675194,
+      "val_hr@10": 0.48462354419466547,
+      "val_ndcg@10": 0.45049972609396577
+    },
+    {
+      "epoch": 21,
+      "train_loss": 5.912595386383586,
+      "val_hr@10": 0.48568398620012837,
+      "val_ndcg@10": 0.4528136576663146
+    },
+    {
+      "epoch": 22,
+      "train_loss": 5.864749913183407,
+      "val_hr@10": 0.4909862165170409,
+      "val_ndcg@10": 0.45309316353479345
+    },
+    {
+      "epoch": 23,
+      "train_loss": 5.826120469858142,
+      "val_hr@10": 0.49204665852250373,
+      "val_ndcg@10": 0.45370089385188395
+    },
+    {
+      "epoch": 24,
+      "train_loss": 5.789735264985051,
+      "val_hr@10": 0.4835630988076029,
+      "val_ndcg@10": 0.4511282990744865
+    },
+    {
+      "epoch": 25,
+      "train_loss": 5.758249407858741,
+      "val_hr@10": 0.4920466606715578,
+      "val_ndcg@10": 0.45302355978420655
+    },
+    {
+      "epoch": 26,
+      "train_loss": 5.727528402688586,
+      "val_hr@10": 0.4920466606715578,
+      "val_ndcg@10": 0.45336485974103496
+    },
+    {
+      "epoch": 27,
+      "train_loss": 5.7008329420954285,
+      "val_hr@10": 0.48674443373624493,
+      "val_ndcg@10": 0.4529159578197455
+    },
+    {
+      "epoch": 28,
+      "train_loss": 5.673444594178589,
+      "val_hr@10": 0.49416755144568286,
+      "val_ndcg@10": 0.4555414053883052
+    },
+    {
+      "epoch": 29,
+      "train_loss": 5.650028857079633,
+      "val_hr@10": 0.48886532451037007,
+      "val_ndcg@10": 0.45344426937219573
+    },
+    {
+      "epoch": 30,
+      "train_loss": 5.626985554736709,
+      "val_hr@10": 0.4984093372920412,
+      "val_ndcg@10": 0.4573185475797946
+    }
+  ],
+  "stop_reason": "completed",
+  "notes": "Causal SASRec (hidden 64, max len 50, 2 layers). Metrics are full-rank HR@10 and NDCG@10 on the official GroupLens MovieLens 100K interactions after time-sorted leave-one-out. Numbers come from this run only.",
+  "stats": {
+    "n_users": 943,
+    "n_items": 1682,
+    "n_train_interactions": 98114,
+    "n_val": 943,
+    "n_test": 943,
+    "min_train_len": 18,
+    "max_train_len": 735,
+    "median_train_len": 63.0,
+    "dataset": "MovieLens 100K (GroupLens official u.data)",
+    "source": "https://files.grouplens.org/datasets/movielens/ml-100k.zip",
+    "protocol": "time-sorted leave-one-out; implicit (all ratings); users with <3 interactions dropped"
+  }
+}

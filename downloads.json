@@ -1,0 +1,111 @@
+{
+  "MNIST": {
+    "branch": "cv_mnist_cnn",
+    "source": "MindSpore 北京镜像",
+    "archives": [
+      {
+        "filename": "MNIST_Data.zip",
+        "url": "https://mindspore-website.obs.cn-north-4.myhuaweicloud.com/notebook/datasets/MNIST_Data.zip",
+        "bytes": 10754903,
+        "sha256": "1df2ae74bd53b840085b40487625da4d4fc1d774678fbf60f29132673dd2e581"
+      }
+    ],
+    "prepare": "把 ZIP 中 train 和 test 目录内的四个 IDX 文件放入 `data/MNIST/raw/`。"
+  },
+  "Fashion-MNIST": {
+    "branch": "cv_fashion_mnist_cnn",
+    "source": "PaddlePaddle 北京镜像",
+    "archives": [
+      {
+        "filename": "train-images-idx3-ubyte.gz",
+        "url": "https://dataset.bj.bcebos.com/fashion_mnist/train-images-idx3-ubyte.gz",
+        "bytes": 26421880,
+        "sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84"
+      },
+      {
+        "filename": "train-labels-idx1-ubyte.gz",
+        "url": "https://dataset.bj.bcebos.com/fashion_mnist/train-labels-idx1-ubyte.gz",
+        "bytes": 29515,
+        "sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845"
+      },
+      {
+        "filename": "t10k-images-idx3-ubyte.gz",
+        "url": "https://dataset.bj.bcebos.com/fashion_mnist/t10k-images-idx3-ubyte.gz",
+        "bytes": 4422102,
+        "sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073"
+      },
+      {
+        "filename": "t10k-labels-idx1-ubyte.gz",
+        "url": "https://dataset.bj.bcebos.com/fashion_mnist/t10k-labels-idx1-ubyte.gz",
+        "bytes": 5148,
+        "sha256": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5"
+      }
+    ],
+    "prepare": "分别解压四个 gzip 文件，把解压后的 IDX 文件放入 `data/FashionMNIST/raw/`。"
+  },
+  "CIFAR-10": {
+    "branch": "cv_cifar10_resnet",
+    "source": "PaddlePaddle 北京镜像",
+    "archives": [
+      {
+        "filename": "cifar-10-python.tar.gz",
+        "url": "https://dataset.bj.bcebos.com/cifar/cifar-10-python.tar.gz",
+        "bytes": 170498071,
+        "sha256": "6d958be074577803d12ecdefd02955f39262c83c16fe9348329d7fe0b5c001ce"
+      }
+    ],
+    "prepare": "将 tar.gz 解压到 `data/`，保留 `data/cifar-10-batches-py/`。使用本地数据训练时设置 `HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1`，训练入口可通过 torchvision 读取这份 Python 版数据。"
+  },
+  "CIFAR-100": {
+    "branch": "cv_cifar100_cnn",
+    "source": "PaddlePaddle 北京镜像",
+    "archives": [
+      {
+        "filename": "cifar-100-python.tar.gz",
+        "url": "https://dataset.bj.bcebos.com/cifar/cifar-100-python.tar.gz",
+        "bytes": 169001437,
+        "sha256": "85cd44d02ba6437773c5bbd22e183051d648de2e7d6b014e1ef29b855ba677a7"
+      }
+    ],
+    "prepare": "将 tar.gz 解压到 `data/`，保留 `data/cifar-100-python/`。使用本地数据训练时设置 `HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1`，训练入口可通过 torchvision 读取这份 Python 版数据。"
+  },
+  "Frappe_x1": {
+    "branch": "ctr_frappe_fm",
+    "source": "HF-Mirror 入口，实测跳转至 Hugging Face 美国存储",
+    "archives": [
+      {
+        "filename": "Frappe_x1.zip",
+        "url": "https://hf-mirror.com/datasets/reczoo/Frappe_x1/resolve/481fa0e/Frappe_x1.zip",
+        "bytes": 2799969,
+        "sha256": "45f6d52c8d57400e6a2767f6fbd121b35ca9c9e67470ae409425189f3c4ec737"
+      }
+    ],
+    "prepare": "把 ZIP 内的 `train.csv`、`valid.csv` 和 `test.csv` 放入项目的 `data/`。"
+  },
+  "MovielensLatest_x1": {
+    "branch": "ctr_ml_latest_deepfm",
+    "source": "HF-Mirror 入口，实测跳转至 Hugging Face 美国存储",
+    "archives": [
+      {
+        "filename": "MovielensLatest_x1.zip",
+        "url": "https://hf-mirror.com/datasets/reczoo/MovielensLatest_x1/resolve/827da4ee36bf6cbaeb13c985af78942209633d7a/MovielensLatest_x1.zip",
+        "bytes": 16151522,
+        "sha256": "a809509dfce89d77ca0db2985a92033c829688c1a99af98f0ead0e0f79766d27"
+      }
+    ],
+    "prepare": "把 ZIP 内的 `train.csv`、`valid.csv` 和 `test.csv` 放入项目的 `data/`。"
+  },
+  "MovieLens 100K": {
+    "branch": "gr_ml100k_sasrec",
+    "source": "清华 TUNA 的 RecBole 发布包",
+    "archives": [
+      {
+        "filename": "recbole-1.2.1-py3-none-any.whl",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/ab/fe/7d606cb7cd2b166a36b100cb9435d21014ceee16c192d972deb0976967a8/recbole-1.2.1-py3-none-any.whl",
+        "bytes": 2130151,
+        "sha256": "9c9948202011f37eb0a7c6768129313f00d6403ad221ec940d5e2d5d5f33a407"
+      }
+    ],
+    "prepare": "把 wheel 当作 ZIP 读取。取出 `recbole/dataset_example/ml-100k/ml-100k.inter`，去掉第一行表头，写入 `data/u.data`。该文件与 GroupLens 原始文件的 SHA-256 一致。首次训练或评估时，脚本会从 `data/u.data` 在项目内生成 `data/processed/`。"
+  }
+}

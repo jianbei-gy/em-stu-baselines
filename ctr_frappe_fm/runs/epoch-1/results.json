@@ -1,0 +1,33 @@
+{
+  "project_id": "ctr_frappe_fm",
+  "task": "CTR prediction",
+  "dataset": "Frappe_x1 (reczoo/BARS official 7:2:1 split of the Frappe app-usage CTR set; 202,027 / 57,722 / 28,860). Source: https://huggingface.co/datasets/reczoo/Frappe_x1 ; original: Baltrunas et al., arXiv:1505.03014, https://www.baltrunas.info/context-aware",
+  "model": "Factorization Machine",
+  "metrics": {
+    "auc": 0.9176955476394066,
+    "logloss": 0.3840640187263489,
+    "best_auc": 0.9176955476394066
+  },
+  "split": "official test split of the published dataset",
+  "epochs": 1,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 2.12,
+  "timestamp": "2026-11-20T15:14:25.050588+08:00",
+  "command": "python scripts/train.py --epochs 1 --batch-size 1024 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5409183971261483,
+      "test_auc": 0.9176955476394066,
+      "test_logloss": 0.3840640187263489,
+      "valid_auc": 0.9186297988867638,
+      "valid_logloss": 0.3832206428050995
+    }
+  ],
+  "n_train": 202027,
+  "n_test": 28860,
+  "n_features": 10,
+  "hash_bins_per_field": 20000,
+  "notes": "Complete published Frappe_x1 split (md5 verified). Not a hand-cut Criteo/Avazu dump. Features hashed per field to a fixed bin size for a compact embedding table. Metrics: AUC and LogLoss on the official test split."
+}
