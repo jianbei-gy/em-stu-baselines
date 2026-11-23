@@ -1,0 +1,65 @@
+{
+  "project_id": "ctr_ml_latest_deepfm",
+  "task": "CTR prediction",
+  "dataset": "MovielensLatest_x1 (reczoo/BARS official 7:2:1 split of MovieLens Latest tagging records formulated as CTR; 1,404,801 / 401,372 / 200,686). Source: https://huggingface.co/datasets/reczoo/MovielensLatest_x1 ; original MovieLens Latest from GroupLens. Features: user_id, item_id, tag_id; label whether the user assigned that tag.",
+  "model": "DeepFM",
+  "metrics": {
+    "auc": 0.9297568330259545,
+    "logloss": 0.32768329977989197,
+    "best_auc": 0.9297568330259545
+  },
+  "split": "official test split of the published dataset",
+  "epochs": 5,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 71.71,
+  "timestamp": "2026-11-18T11:53:11.106258+08:00",
+  "command": "python scripts/train.py --epochs 5 --batch-size 2048 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.3786186760618243,
+      "test_auc": 0.9187506232021361,
+      "test_logloss": 0.3300384283065796,
+      "valid_auc": 0.9186892504409864,
+      "valid_logloss": 0.330506294965744
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3174221836581411,
+      "test_auc": 0.9204554856798696,
+      "test_logloss": 0.3289302885532379,
+      "valid_auc": 0.920088239126883,
+      "valid_logloss": 0.32967981696128845
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.29812458542896614,
+      "test_auc": 0.9242134538541382,
+      "test_logloss": 0.32336530089378357,
+      "valid_auc": 0.9239592260246781,
+      "valid_logloss": 0.32371389865875244
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.27489808702925905,
+      "test_auc": 0.9273848879738347,
+      "test_logloss": 0.3245323598384857,
+      "valid_auc": 0.9271672338224614,
+      "valid_logloss": 0.3252023160457611
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.24904282808268532,
+      "test_auc": 0.9297568330259545,
+      "test_logloss": 0.32768329977989197,
+      "valid_auc": 0.9296773881891769,
+      "valid_logloss": 0.3281830847263336
+    }
+  ],
+  "n_train": 1404801,
+  "n_test": 200686,
+  "n_features": 3,
+  "hash_bins_per_field": 40000,
+  "notes": "Complete published MovielensLatest_x1 split (md5 verified). Distinct from Frappe and from iPinYou, and also distinct from the MovieLens 100K sequential-rec project (different official GroupLens release and a tag-CTR formulation). Metrics: AUC and LogLoss on the official test split."
+}
