@@ -1,0 +1,73 @@
+{
+  "project_id": "ctr_frappe_fm",
+  "task": "CTR prediction",
+  "dataset": "Frappe_x1 (reczoo/BARS official 7:2:1 split of the Frappe app-usage CTR set; 202,027 / 57,722 / 28,860). Source: https://huggingface.co/datasets/reczoo/Frappe_x1 ; original: Baltrunas et al., arXiv:1505.03014, https://www.baltrunas.info/context-aware",
+  "model": "Factorization Machine",
+  "metrics": {
+    "auc": 0.9329678113959898,
+    "logloss": 0.2882806062698364,
+    "best_auc": 0.9329678113959898
+  },
+  "split": "official test split of the published dataset",
+  "epochs": 6,
+  "device": "cpu",
+  "seed": 42,
+  "duration_sec": 22.38,
+  "timestamp": "2026-11-18T11:51:53.687772+08:00",
+  "command": "python scripts/train.py --epochs 6 --batch-size 1024 --lr 0.001 --seed 42",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5409183999962299,
+      "test_auc": 0.9176955476394066,
+      "test_logloss": 0.3840640187263489,
+      "valid_auc": 0.9186297961728995,
+      "valid_logloss": 0.3832206428050995
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.32323841354945576,
+      "test_auc": 0.9289819108388706,
+      "test_logloss": 0.3023407757282257,
+      "valid_auc": 0.9304829188449933,
+      "valid_logloss": 0.3017796277999878
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.28662096931641246,
+      "test_auc": 0.9307789663312931,
+      "test_logloss": 0.2936396300792694,
+      "valid_auc": 0.9328392546123586,
+      "valid_logloss": 0.2919310927391052
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.2781615102586199,
+      "test_auc": 0.931405233251345,
+      "test_logloss": 0.2920539677143097,
+      "valid_auc": 0.9333842114595209,
+      "valid_logloss": 0.2899191677570343
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.27306169460983604,
+      "test_auc": 0.9318227020221403,
+      "test_logloss": 0.2904544174671173,
+      "valid_auc": 0.9340370871569347,
+      "valid_logloss": 0.28803113102912903
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2685274266971604,
+      "test_auc": 0.9329678113959898,
+      "test_logloss": 0.2882806062698364,
+      "valid_auc": 0.9352848154540438,
+      "valid_logloss": 0.28529706597328186
+    }
+  ],
+  "n_train": 202027,
+  "n_test": 28860,
+  "n_features": 10,
+  "hash_bins_per_field": 20000,
+  "notes": "Complete published Frappe_x1 split (md5 verified). Not a hand-cut Criteo/Avazu dump. Features hashed per field to a fixed bin size for a compact embedding table. Metrics: AUC and LogLoss on the official test split."
+}
