@@ -1,0 +1,7 @@
+# Python 3.10+ (本机实跑为 3.13.5)
+# CPU wheel (optional, matches this box):
+#   pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.5.5
+Pillow==12.3.0

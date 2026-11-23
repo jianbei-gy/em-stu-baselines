@@ -1,0 +1,2 @@
+MNIST (official, torchvision)
+Trained on official 60,000 training images; reported metric is official test top-1 accuracy.
