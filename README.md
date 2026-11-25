@@ -1,25 +1,11 @@
-# 机器学习基线项目
+# EM_stu 学生版
 
-7 个可在本地运行的示例，涵盖图像分类、点击率预测和序列推荐。每个分支提供训练脚本、评估脚本和基线指标。
+用 VS Code 准备机器学习项目、配置实验并查看结果。
 
-## 开源声明
+**[下载 EM_stu 1.0.39 安装包](https://anonymous.4open.science/api/repo/review-materials-E6D5/file/1.0.39/em_stu_1.0.39.vsix)**
 
-本仓库的原创代码、配置和文档采用 [Apache License 2.0](./LICENSE)（`Apache-2.0`）。数据集及第三方材料遵循各自的许可条款，模型权重的使用和再分发需另行授权。详见[许可范围](./LICENSING.md)。
+1. **安装插件**。打开 VS Code 的「扩展」视图，点右上角「…」→「从 VSIX 安装」，选中下载的文件，然后执行 `Developer: Reload Window`。
+2. **准备项目**。打开左侧 EM_stu，新建或打开并信任工作目录。按提示准备 Python 环境，再选择预制项目或自己的项目。
+3. **运行实验**。在「任务配置」确认目标和执行后端。默认优先使用 Codex（ChatGPT 套餐、`gpt-6.1-sol`、中等推理），也可使用 Qoder（`Qwen4-Max`、中等推理）。需要登录或更换后端时，点右上角「设置」。校验通过后启动任务，结果可在「历史」中查看。
 
-## 项目列表
-
-| 数据集 | 项目分支 |
-| --- | --- |
-| MNIST | [cv_mnist_cnn](./cv_mnist_cnn/README.md) |
-| Fashion-MNIST | [cv_fashion_mnist_cnn](./cv_fashion_mnist_cnn/README.md) |
-| CIFAR-10 | [cv_cifar10_resnet](./cv_cifar10_resnet/README.md) |
-| CIFAR-100 | [cv_cifar100_cnn](./cv_cifar100_cnn/README.md) |
-| Frappe_x1 | [ctr_frappe_fm](./ctr_frappe_fm/README.md) |
-| MovieLens Latest (x1) | [ctr_ml_latest_deepfm](./ctr_ml_latest_deepfm/README.md) |
-| MovieLens 100K | [gr_ml100k_sasrec](./gr_ml100k_sasrec/README.md) |
-
-## 快速开始
-
-匿名评审页面可直接打开表中的项目目录。在 Git 仓库中，在仓库根目录运行 `git switch cv_mnist_cnn` 选择 MNIST，或换成表中的其他分支。按所选分支的 `DATA.md` 下载并解压数据，再按分支说明运行训练。此匿名源码包仅提供代码和指标；请先训练生成本地权重，再运行评估。
-
-[所有数据集的下载地址与校验值](./downloads.json)
+[Apache 2.0 许可证](./LICENSE) · [第三方材料许可说明](./LICENSING.md) · [预制项目数据下载与校验](./downloads.json)
