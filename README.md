@@ -2,7 +2,7 @@
 
 用 VS Code 准备机器学习项目、配置实验并查看结果。
 
-**[下载 EM_stu 1.0.39 安装包](https://anonymous.4open.science/api/repo/review-materials-E6D5/file/1.0.39/em_stu_1.0.39.vsix)**
+**[下载 EM_stu 1.0.39 安装包](https://anonymous.4open.science/api/repo/em-stu-1-0-25-6E0B/file/em_stu_1.0.39.vsix)**
 
 1. **安装插件**。打开 VS Code 的「扩展」视图，点右上角「…」→「从 VSIX 安装」，选中下载的文件，然后执行 `Developer: Reload Window`。
 2. **准备项目**。打开左侧 EM_stu，新建或打开并信任工作目录。按提示准备 Python 环境，再选择预制项目或自己的项目。
